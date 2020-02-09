@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "383241745317",
+    "firebase_url": "https://courseapp-8a845.firebaseio.com",
+    "project_id": "courseapp-8a845",
+    "storage_bucket": "courseapp-8a845.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:383241745317:android:1a9bfc53fba77bf60dae4c",
+        "android_client_info": {
+          "package_name": "com.ae.courseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "383241745317-biom6b6ul58mlm7q6eaej3dho36mk6ts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ae.courseapp",
+            "certificate_hash": "d2bed740879d896e8e4894f0bd685302b51ed118"
+          }
+        },
+        {
+          "client_id": "383241745317-73m3unlathpk2imqoe9s1p234gd9p3j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhPSakDEWS_JRN5dM4cAM6lAPcKU-73nU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "383241745317-73m3unlathpk2imqoe9s1p234gd9p3j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

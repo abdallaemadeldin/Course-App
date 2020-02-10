@@ -18,7 +18,8 @@ export const styles = StyleSheet.create({
         width: width * 80 / 100,
         height: width * 80 / 100,
         borderRadius: width * 40 / 100,
-        backgroundColor: '#1a2e3535',
+        backgroundColor: Colors.dark,
+        opacity: .4,
         position: 'absolute',
         top: -width * 40 / 100,
         left: -width * 40 / 100
@@ -27,7 +28,8 @@ export const styles = StyleSheet.create({
         width: width * 60 / 100,
         height: width * 60 / 100,
         borderRadius: width * 30 / 100,
-        backgroundColor: '#1a2e3535',
+        backgroundColor: Colors.dark,
+        opacity: .4,
         position: 'absolute',
         top: width * 55 / 100,
         right: -width * 50 / 100
@@ -36,7 +38,8 @@ export const styles = StyleSheet.create({
         width: width * 65 / 100,
         height: width * 65 / 100,
         borderRadius: width * 32.5 / 100,
-        backgroundColor: '#1a2e3535',
+        backgroundColor: Colors.dark,
+        opacity: .4,
         position: 'absolute',
         bottom: width * 10 / 100,
         left: -width * 55 / 100
@@ -45,7 +48,8 @@ export const styles = StyleSheet.create({
         width: width * 40 / 100,
         height: width * 40 / 100,
         borderRadius: width * 20 / 100,
-        backgroundColor: '#1a2e3535',
+        backgroundColor: Colors.dark,
+        opacity: .4,
         position: 'absolute',
         bottom: -width * 20 / 100,
         right: -width * 20 / 100

@@ -3,6 +3,13 @@ import { View, Image } from 'react-native';
 import { styles } from './style';
 
 class Splash extends React.Component {
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.props.navigation.replace('Intro');
+        }, 2000);
+    }
+
     render() {
         const { container, topCircle, rightCircle, leftCircle, bottomCircle, logo } = styles;
 

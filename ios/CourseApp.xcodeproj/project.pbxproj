@@ -39,6 +39,8 @@
 		F41FCDA27B6F43ACA13F6511 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6E454EF3124435F8B47D380 /* MaterialIcons.ttf */; };
 		F6289944653A8BC61AAAC3B6 /* libPods-CourseAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 215B26437C832EAE5A840FD3 /* libPods-CourseAppTests.a */; };
 		F8F4273FD7474846845B4CFF /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E9F9D6F78CA04C198979D758 /* FontAwesome5_Solid.ttf */; };
+		4D99EFC20D0D42FB801E8C5F /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 42496F61C13148368AB5585A /* Poppins-Bold.ttf */; };
+		CBA054960AAF4671B728D204 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294F90FE29F241D19E5DA880 /* Poppins-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F3489BDA10FAADF0EF4D9924 /* libPods-CourseApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CourseApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42496F61C13148368AB5585A /* Poppins-Bold.ttf */ = {isa = PBXFileReference; name = "Poppins-Bold.ttf"; path = "../src/assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		294F90FE29F241D19E5DA880 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; name = "Poppins-Regular.ttf"; path = "../src/assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,8 @@
 				21C0234ACABD4C649E2586AB /* Octicons.ttf */,
 				3DA7A36905794B0A92EC3C84 /* SimpleLineIcons.ttf */,
 				11DA24959EC14CE6955F3C44 /* Zocial.ttf */,
+				42496F61C13148368AB5585A /* Poppins-Bold.ttf */,
+				294F90FE29F241D19E5DA880 /* Poppins-Regular.ttf */,
 			);
 			name = Resources;
 			path = "";
@@ -425,6 +431,8 @@
 				8D96E824B107441CBC651D78 /* Octicons.ttf in Resources */,
 				3AD2B011A59F4DBAB131AC84 /* SimpleLineIcons.ttf in Resources */,
 				CF0C09F8909448FDA87AE6D1 /* Zocial.ttf in Resources */,
+				4D99EFC20D0D42FB801E8C5F /* Poppins-Bold.ttf in Resources */,
+				CBA054960AAF4671B728D204 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

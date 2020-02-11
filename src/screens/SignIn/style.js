@@ -1,12 +1,13 @@
-import { Dimensions, StyleSheet, Image } from 'react-native';
+import { Dimensions, StyleSheet, Image, Platform, PixelRatio } from 'react-native';
 import { Colors } from './../../../app.json';
 
-const { width, height, fontScale } = Dimensions.get('screen');
+const { width, height, scale } = Dimensions.get('window');
 const vector = Image.resolveAssetSource(require('./../../assets/vector.png'));
 const vectorWidth = width * 55 / 100;
 const vectorHeight = (vector.height * vectorWidth) / vector.height;
 const fontFamily = "Poppins-Bold";
 const fontFamilyR = "Poppins-Regular";
+const fontScale = scale === 3 ? 1.2 : scale === 4 ? 1 : scale === 2 ? 1.4 : 1.6;
 
 export const styles = StyleSheet.create({
     container: {
@@ -76,7 +77,7 @@ export const styles = StyleSheet.create({
         backgroundColor: Colors.green,
         borderRadius: 22 * fontScale,
         alignSelf: 'center',
-        marginVertical: '8%'
+        marginVertical: height * 3 / 100
     },
     loginBtnTitle: {
         fontSize: 14 * fontScale,
@@ -87,7 +88,16 @@ export const styles = StyleSheet.create({
         alignSelf: 'center',
         fontFamily: fontFamilyR,
         color: Colors.mintGray,
-        fontSize: 13 * fontScale
+        fontSize: 13 * fontScale,
+        position: 'absolute',
+        ...Platform.select({
+            android: {
+                bottom: 15
+            },
+            ios: {
+                bottom: 45
+            }
+        })
     },
     boldText: {
         fontFamily: fontFamily,

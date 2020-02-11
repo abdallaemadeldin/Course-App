@@ -1,7 +1,7 @@
 import { Dimensions, StyleSheet, Image } from 'react-native';
 import { Colors } from './../../../app.json';
 
-const { width, height, fontScale } = Dimensions.get('screen');
+const { width, height, scale } = Dimensions.get('screen');
 const logo = Image.resolveAssetSource(require('./../../assets/logo.png'));
 const logoWidth = width * 10 / 100;
 const logoHeight = (logo.height * logoWidth) / logo.width;
@@ -10,6 +10,7 @@ const bannerWidth = width * 60 / 100;
 const bannerHeight = (banner.height * bannerWidth) / banner.width;
 const fontFamily = "Poppins-Bold";
 const fontFamilyR = "Poppins-Regular";
+const fontScale = scale === 3 ? 1.2 : scale === 4 ? 1 : scale === 2 ? 1.4 : 1.6;
 
 export const styles = StyleSheet.create({
     container: {

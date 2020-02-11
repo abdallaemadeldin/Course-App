@@ -1,9 +1,10 @@
 import React from 'react';
-import { View, Dimensions, Text, StyleSheet, TextInput } from 'react-native';
+import { View, Dimensions, Text, StyleSheet, TextInput, Platform } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Colors } from './../../app.json';
 
-const { width, height, fontScale } = Dimensions.get('screen');
+const { scale } = Dimensions.get('screen');
+const fontScale = scale === 3 ? 1.2 : scale === 4 ? 1 : scale === 2 ? 1.4 : 1.6;
 
 class TextField extends React.PureComponent {
 
@@ -66,7 +67,14 @@ const styles = StyleSheet.create({
         width: '100%',
         fontFamily: fontFamilyR,
         color: Colors.dark,
-        paddingBottom: 5
+        ...Platform.select({
+            android: {
+                paddingBottom: 5
+            },
+            ios: {
+                paddingTop: 5
+            }
+        })
     },
     inputIcon: {
         fontSize: 18 * fontScale,

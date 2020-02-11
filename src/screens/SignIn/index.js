@@ -1,0 +1,36 @@
+import React from 'react';
+import { View, Image, Text, TouchableOpacity, Keyboard } from 'react-native';
+import { styles } from './style';
+import TextInput from './../../components/Textinput';
+
+class SignIn extends React.Component {
+    render() {
+        const { container, subContainer, topCircle, rightCircle, vector, formTitle, formCaption, forgetPassword, loginBtn, loginBtnTitle, createAccount, boldText } = styles;
+
+        return (
+            <View style={container}>
+                {
+                    [...new Array(2)].map((e, i) => {
+                        return <View key={i} style={i === 0 ? topCircle : rightCircle} />
+                    })
+                }
+                <Image source={require('./../../assets/vector.png')} style={vector} />
+                <TouchableOpacity style={subContainer} activeOpacity={1} onPress={() => Keyboard.dismiss()}>
+                    <Text style={formTitle}>Login</Text>
+                    <Text style={formCaption}>Welcome Back.</Text>
+
+                    <TextInput placeholder="Email" returnKeyType="next" marginBottom="6%" reference={ref => this.email = ref} onSubmitEditing={() => this.password.focus()} />
+                    <TextInput placeholder="Password" returnKeyType="done" inputType="password" marginBottom="1%" reference={ref => this.password = ref} />
+                    <Text style={forgetPassword}>Forget Password?</Text>
+
+                    <TouchableOpacity style={loginBtn} activeOpacity={.9}>
+                        <Text style={loginBtnTitle}>Login</Text>
+                    </TouchableOpacity>
+                    <Text style={createAccount}>Don't have an account? <Text style={boldText}>SIGN UP</Text></Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+}
+
+export default SignIn;

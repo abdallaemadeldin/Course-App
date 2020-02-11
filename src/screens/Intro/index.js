@@ -20,7 +20,7 @@ class Intro extends React.Component {
 
                 <Text style={introDesc}>Today we will create chat application using react native</Text>
 
-                <TouchableOpacity style={[basicBtn, greenBtn]} activeOpacity={.8}>
+                <TouchableOpacity style={[basicBtn, greenBtn]} activeOpacity={.8} onPress={() => this.props.navigation.navigate('SignIn')}>
                     <Text style={btnTitle}>Login</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={basicBtn} activeOpacity={.8}>

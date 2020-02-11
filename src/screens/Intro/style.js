@@ -73,7 +73,7 @@ export const styles = StyleSheet.create({
         elevation: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 21 * fontScale,
+        borderRadius: 22 * fontScale,
         backgroundColor: Colors.dark,
         marginBottom: height * 2.5 / 100
     },

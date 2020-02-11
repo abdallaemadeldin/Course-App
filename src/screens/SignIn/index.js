@@ -8,14 +8,14 @@ class SignIn extends React.Component {
         const { container, subContainer, topCircle, rightCircle, vector, formTitle, formCaption, forgetPassword, loginBtn, loginBtnTitle, createAccount, boldText } = styles;
 
         return (
-            <View style={container}>
+            <TouchableOpacity style={container} activeOpacity={1} onPress={() => Keyboard.dismiss()}>
                 {
                     [...new Array(2)].map((e, i) => {
                         return <View key={i} style={i === 0 ? topCircle : rightCircle} />
                     })
                 }
                 <Image source={require('./../../assets/vector.png')} style={vector} />
-                <TouchableOpacity style={subContainer} activeOpacity={1} onPress={() => Keyboard.dismiss()}>
+                <View style={subContainer}>
                     <Text style={formTitle}>Login</Text>
                     <Text style={formCaption}>Welcome Back.</Text>
 
@@ -27,8 +27,8 @@ class SignIn extends React.Component {
                         <Text style={loginBtnTitle}>Login</Text>
                     </TouchableOpacity>
                     <Text style={createAccount}>Don't have an account? <Text style={boldText}>SIGN UP</Text></Text>
-                </TouchableOpacity>
-            </View>
+                </View>
+            </TouchableOpacity>
         );
     }
 }

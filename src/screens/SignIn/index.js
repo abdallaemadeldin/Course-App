@@ -20,7 +20,7 @@ class SignIn extends React.Component {
                     <Text style={formCaption}>Welcome Back.</Text>
 
                     <TextInput placeholder="Email" returnKeyType="next" marginBottom="6%" reference={ref => this.email = ref} onSubmitEditing={() => this.password.focus()} />
-                    <TextInput placeholder="Password" returnKeyType="done" inputType="password" marginBottom="1%" reference={ref => this.password = ref} />
+                    <TextInput placeholder="Password" returnKeyType="done" inputType="password" marginBottom="2%" reference={ref => this.password = ref} />
                     <Text style={forgetPassword}>Forget Password?</Text>
 
                     <TouchableOpacity style={loginBtn} activeOpacity={.9}>

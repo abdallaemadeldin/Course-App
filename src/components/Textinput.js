@@ -3,7 +3,7 @@ import { View, Dimensions, Text, StyleSheet, TextInput, Platform } from 'react-n
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Colors } from './../../app.json';
 
-const { scale } = Dimensions.get('screen');
+const { scale, width } = Dimensions.get('screen');
 const fontScale = scale === 3 ? 1.2 : scale === 4 ? 1 : scale === 2 ? 1.4 : 1.6;
 
 class TextField extends React.PureComponent {
@@ -26,7 +26,7 @@ class TextField extends React.PureComponent {
                     returnKeyType={returnKeyType}
                     ref={ref => reference ? reference(ref) : null}
                     onSubmitEditing={onSubmitEditing ? () => onSubmitEditing() : null}
-                    keyboardType={inputType === 'number' ? "number-pad" : inputType === 'url' ? "url" : "default"}
+                    keyboardType={inputType === 'number' ? "number-pad" : inputType === 'url' ? "url" : inputType === 'email' ? "email-address" : "default"}
                     secureTextEntry={this.state.secured && inputType === 'password'}
                 />
                 {inputType === 'password' ? <Icon name={this.state.secured ? "eye-off" : "eye"} style={inputIcon} onPress={() => {
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
         fontFamily: fontFamilyR,
         fontSize: 13 * fontScale,
         backgroundColor: Colors.white,
-        paddingHorizontal: '2%',
+        paddingHorizontal: width * 1.5 / 100,
         position: 'absolute',
         top: -10,
         left: 20,

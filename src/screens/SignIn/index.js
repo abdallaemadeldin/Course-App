@@ -21,7 +21,7 @@ class SignIn extends React.Component {
 
                     <TextInput placeholder="Email" returnKeyType="next" marginBottom="6%" inputType="email" reference={ref => this.email = ref} onSubmitEditing={() => this.password.focus()} />
                     <TextInput placeholder="Password" returnKeyType="done" inputType="password" marginBottom="2%" reference={ref => this.password = ref} />
-                    <Text style={forgetPassword} onPress={() => this.props.navigation.navigate('ForgetPassword')}>Forgot Password?</Text>
+                    <Text style={forgetPassword} onPress={() => this.props.navigation.navigate('ForgotPassword')}>Forgot Password?</Text>
 
                     <TouchableOpacity style={loginBtn} activeOpacity={.9}>
                         <Text style={loginBtnTitle}>Login</Text>

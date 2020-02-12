@@ -24,7 +24,7 @@ class ForgotPassword extends React.Component {
                     <Text style={formTitle}>Forgot Password?</Text>
                     <Text style={formCaption}>Enter your email address here to receive further instructions.</Text>
 
-                    <TextInput placeholder="Email" inputType="email" marginBottom="6%" reference={ref => this.email = ref} />
+                    <TextInput placeholder="Email" inputType="email" reference={ref => this.email = ref} />
 
                     <TouchableOpacity style={submitBtn} activeOpacity={.9}>
                         <Text style={submitBtnTitle}>Submit</Text>

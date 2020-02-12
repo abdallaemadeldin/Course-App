@@ -19,14 +19,14 @@ class SignIn extends React.Component {
                     <Text style={formTitle}>Login</Text>
                     <Text style={formCaption}>Welcome Back.</Text>
 
-                    <TextInput placeholder="Email" returnKeyType="next" marginBottom="6%" inputType="email" reference={ref => this.email = ref} onSubmitEditing={() => this.password.focus()} />
+                    <TextInput placeholder="Email" returnKeyType="next" inputType="email" reference={ref => this.email = ref} onSubmitEditing={() => this.password.focus()} />
                     <TextInput placeholder="Password" returnKeyType="done" inputType="password" marginBottom="2%" reference={ref => this.password = ref} />
                     <Text style={forgetPassword} onPress={() => this.props.navigation.navigate('ForgotPassword')}>Forgot Password?</Text>
 
                     <TouchableOpacity style={loginBtn} activeOpacity={.9}>
                         <Text style={loginBtnTitle}>Login</Text>
                     </TouchableOpacity>
-                    <Text style={createAccount}>Don't have an account? <Text style={boldText}>SIGN UP</Text></Text>
+                    <Text style={createAccount}>Don't have an account? <Text style={boldText} onPress={() => this.props.navigation.navigate('SignUp')}>SIGN UP</Text></Text>
                 </View>
             </TouchableOpacity>
         );

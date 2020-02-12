@@ -20,7 +20,7 @@ class TextField extends React.PureComponent {
             <View style={[inputContainer, { flexDirection: inputType === 'password' ? "row" : "column", marginBottom: marginBottom ? marginBottom : height * 3 / 100 }]}>
                 <Text style={inputPlaceholder}>{placeholder}</Text>
                 <TextInput
-                    style={input}
+                    style={[input, { width: inputType === 'password' ? '93%' : '100%' }]}
                     autoCapitalize="none"
                     selectionColor={Colors.mintGray}
                     returnKeyType={returnKeyType}
@@ -63,18 +63,9 @@ const styles = StyleSheet.create({
         color: Colors.mintGray
     },
     input: {
-        flex: 1,
-        width: '100%',
+        height: 44,
         fontFamily: fontFamilyR,
-        color: Colors.dark,
-        // ...Platform.select({
-        //     android: {
-        //         paddingBottom: 2
-        //     },
-        //     ios: {
-        //         paddingTop: 5
-        //     }
-        // })
+        color: Colors.dark
     },
     inputIcon: {
         fontSize: 18 * fontScale,

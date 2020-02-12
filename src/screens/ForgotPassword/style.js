@@ -1,4 +1,4 @@
-import { Dimensions, StyleSheet, Image, Platform, PixelRatio } from 'react-native';
+import { Dimensions, StyleSheet, Image } from 'react-native';
 import { Colors } from './../../../app.json';
 
 const { width, height, scale } = Dimensions.get('window');

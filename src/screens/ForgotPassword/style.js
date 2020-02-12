@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
     },
     subContainer: {
         width: width,
-        height: height * 60 / 100,
+        height: height * 50 / 100,
         backgroundColor: Colors.white,
         alignItems: 'flex-start',
         borderTopLeftRadius: 25,
@@ -78,5 +78,20 @@ export const styles = StyleSheet.create({
         fontSize: 14 * fontScale,
         color: Colors.white,
         fontFamily: fontFamily
+    },
+    title: {
+        fontFamily: fontFamily,
+        color: Colors.white,
+        fontSize: 19 * fontScale,
+        alignSelf: 'flex-start',
+        margin: '5%'
+    },
+    backBtn: {
+        alignSelf: 'flex-start',
+        marginStart: '5%'
+    },
+    backBtnArrow: {
+        fontSize: 22 * fontScale,
+        color: Colors.white
     }
 });

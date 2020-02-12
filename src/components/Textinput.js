@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Dimensions, Text, StyleSheet, TextInput, Platform } from 'react-native';
+import { View, Dimensions, Text, StyleSheet, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Colors } from './../../app.json';
 
-const { scale, width } = Dimensions.get('screen');
+const { scale, width, height } = Dimensions.get('screen');
 const fontScale = scale === 3 ? 1.2 : scale === 4 ? 1 : scale === 2 ? 1.4 : 1.6;
 
 class TextField extends React.PureComponent {
@@ -17,7 +17,7 @@ class TextField extends React.PureComponent {
         const { placeholder, returnKeyType, onSubmitEditing, inputType, reference, marginBottom } = this.props;
 
         return (
-            <View style={[inputContainer, { flexDirection: inputType === 'password' ? "row" : "column", marginBottom: marginBottom ? marginBottom : null }]}>
+            <View style={[inputContainer, { flexDirection: inputType === 'password' ? "row" : "column", marginBottom: marginBottom ? marginBottom : height * 3 / 100 }]}>
                 <Text style={inputPlaceholder}>{placeholder}</Text>
                 <TextInput
                     style={input}
@@ -67,14 +67,14 @@ const styles = StyleSheet.create({
         width: '100%',
         fontFamily: fontFamilyR,
         color: Colors.dark,
-        ...Platform.select({
-            android: {
-                paddingBottom: 5
-            },
-            ios: {
-                paddingTop: 5
-            }
-        })
+        // ...Platform.select({
+        //     android: {
+        //         paddingBottom: 2
+        //     },
+        //     ios: {
+        //         paddingTop: 5
+        //     }
+        // })
     },
     inputIcon: {
         fontSize: 18 * fontScale,

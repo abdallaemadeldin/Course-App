@@ -58,7 +58,7 @@ export const styles = StyleSheet.create({
     },
     formCaption: {
         fontFamily: fontFamilyR,
-        fontSize: 16 * fontScale,
+        fontSize: 14 * fontScale,
         marginTop: '1%',
         marginBottom: '8%',
         color: Colors.dark
@@ -77,6 +77,7 @@ export const styles = StyleSheet.create({
         backgroundColor: Colors.green,
         borderRadius: 22 * fontScale,
         alignSelf: 'center',
+        elevation: 5,
         marginVertical: height * 3 / 100
     },
     loginBtnTitle: {

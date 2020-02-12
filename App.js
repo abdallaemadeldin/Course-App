@@ -13,6 +13,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Splash from './src/screens/Splash';
 import Intro from './src/screens/Intro';
 import SignIn from './src/screens/SignIn';
+import ForgetPassword from './src/screens/ForgetPassword';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ class App extends React.Component {
           <Stack.Screen name="Splash" component={Splash} />
           <Stack.Screen name="Intro" component={Intro} />
           <Stack.Screen name="SignIn" component={SignIn} />
+          <Stack.Screen name="ForgetPassword" component={ForgetPassword} />
         </Stack.Navigator>
       </NavigationContainer>
     );

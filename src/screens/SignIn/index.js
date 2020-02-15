@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Image, Text, TouchableOpacity, Keyboard } from 'react-native';
 import { styles } from './style';
 import TextInput from './../../components/Textinput';
+import { singIn } from './../../Firebase/authActions';
 
 class SignIn extends React.Component {
     render() {
@@ -23,7 +24,9 @@ class SignIn extends React.Component {
                     <TextInput placeholder="Password" returnKeyType="done" inputType="password" marginBottom="2%" reference={ref => this.password = ref} />
                     <Text style={forgetPassword} onPress={() => this.props.navigation.navigate('ForgotPassword')}>Forgot Password?</Text>
 
-                    <TouchableOpacity style={loginBtn} activeOpacity={.9}>
+                    <TouchableOpacity style={loginBtn} activeOpacity={.9} onPress={() => {
+                        singIn(this.email._lastNativeText, this.password._lastNativeText, this.props.navigation);
+                    }}>
                         <Text style={loginBtnTitle}>Login</Text>
                     </TouchableOpacity>
                     <Text style={createAccount}>Don't have an account? <Text style={boldText} onPress={() => this.props.navigation.navigate('SignUp')}>SIGN UP</Text></Text>

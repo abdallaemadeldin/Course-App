@@ -1,10 +1,12 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet, Image } from 'react-native';
 import { Colors } from './../../../app.json';
 
 const { width, height, scale } = Dimensions.get('window');
 const fontFamily = "Poppins-Bold";
-const fontFamilyR = "Poppins-Regular";
 const fontScale = scale === 3 ? 1.2 : scale === 4 ? 1 : scale === 2 ? 1.4 : 1.6;
+const vector = Image.resolveAssetSource(require('./../../assets/vector.png'));
+const vectorWidth = width * 40 / 100;
+const vectorHeight = (vector.height * vectorWidth) / vector.height;
 
 export const styles = StyleSheet.create({
     container: {
@@ -16,7 +18,7 @@ export const styles = StyleSheet.create({
     },
     subContainer: {
         width: width,
-        height: height * 80 / 100,
+        height: height * 60 / 100,
         backgroundColor: Colors.white,
         alignItems: 'flex-start',
         borderTopLeftRadius: 25,
@@ -70,6 +72,10 @@ export const styles = StyleSheet.create({
     backBtn: {
         alignSelf: 'flex-start',
         marginStart: '5%'
+    },
+    vector: {
+        width: vectorWidth,
+        height: vectorHeight
     },
     backBtnArrow: {
         fontSize: 22 * fontScale,

@@ -3,6 +3,7 @@ import { View, Image, Text, TouchableOpacity, Keyboard } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { styles } from './style';
 import TextInput from '../../components/Textinput';
+import { forgotPassword } from './../../Firebase/authActions';
 
 class ForgotPassword extends React.Component {
     render() {
@@ -26,7 +27,7 @@ class ForgotPassword extends React.Component {
 
                     <TextInput placeholder="Email" inputType="email" reference={ref => this.email = ref} />
 
-                    <TouchableOpacity style={submitBtn} activeOpacity={.9}>
+                    <TouchableOpacity style={submitBtn} activeOpacity={.9} onPress={() => forgotPassword(this.email._lastNativeText)}>
                         <Text style={submitBtnTitle}>Submit</Text>
                     </TouchableOpacity>
                 </View>
